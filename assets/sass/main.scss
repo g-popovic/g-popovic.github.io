@@ -1776,7 +1776,7 @@ body.is-menu-visible {
 			('transform 0.75s ease', 'opacity 0.75s ease')
 		);
 		@include vendor('transition-delay', '3.5s');
-		@include vendor('transform', 'translateY(0)');
+		@include vendor('transform', 'translate(-50%, 0)');
 
 		border: none;
 		bottom: 0;
@@ -1858,7 +1858,7 @@ body.is-preload {
 		}
 
 		.more {
-			@include vendor('transform', 'translateY(8.5em)');
+			@include vendor('transform', 'translate(-50%, 8.5em)');
 			opacity: 0;
 		}
 
