@@ -9357,7 +9357,8 @@ body.is-menu-visible #menu {
   height: 8.5em;
   left: 50%;
   letter-spacing: 0.225em;
-  margin-left: -8.5em;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   opacity: 1;
   outline: 0;
   padding-left: 0.225em;

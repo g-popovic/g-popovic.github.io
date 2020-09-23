@@ -1777,6 +1777,7 @@ body.is-menu-visible {
 		);
 		@include vendor('transition-delay', '3.5s');
 		@include vendor('transform', 'translateY(0)');
+
 		border: none;
 		bottom: 0;
 		color: inherit;
@@ -1784,7 +1785,7 @@ body.is-menu-visible {
 		height: 8.5em;
 		left: 50%;
 		letter-spacing: _size(letter-spacing-alt);
-		margin-left: -8.5em;
+		transform: translateX(-50%);
 		opacity: 1;
 		outline: 0;
 		padding-left: _size(letter-spacing-alt);
