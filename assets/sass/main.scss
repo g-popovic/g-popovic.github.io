@@ -15,6 +15,30 @@
 
 // Breakpoints.
 
+.avatar img {
+	border-radius: 8rem;
+	height: 16rem;
+	width: 12rem;
+	object-fit: cover;
+	object-position: center;
+	margin-bottom: 2rem;
+	margin-top: 0;
+}
+
+.style6 {
+	background-color: darken(transparentize(_palette(bg), 0.6), 8) !important;
+	backdrop-filter: blur(8px);
+	margin: -1rem 0;
+	height: 10rem !important;
+	box-sizing: content-box;
+}
+
+#one,
+#two {
+	position: relative;
+	z-index: 1;
+}
+
 @include breakpoints(
 	(
 		xlarge: (
@@ -922,10 +946,23 @@ ul.icons {
 	cursor: default;
 	list-style: none;
 	padding-left: 0;
+	font-size: 1.5rem;
 
 	li {
 		display: inline-block;
 		padding: 0 1em 0 0;
+
+		a {
+			color: _palette(fg-light);
+			display: inline-block;
+			transform: scale(1);
+			transition: 0.2s ease;
+
+			&:hover {
+				color: _palette(fg);
+				transform: scale(1.2);
+			}
+		}
 
 		&:last-child {
 			padding-right: 0 !important;
