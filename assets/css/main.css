@@ -5832,7 +5832,6 @@
 }
 
 .style6 {
-  background-color: rgba(29, 36, 42, 0.4) !important;
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
   margin: -1rem 0;
@@ -5841,8 +5840,14 @@
           box-sizing: content-box;
 }
 
-#one,
-#two {
+.style7 {
+  background-color: rgba(36, 43, 51, 0.1) !important;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  margin-top: -1rem;
+}
+
+#one {
   position: relative;
   z-index: 1;
 }
@@ -8063,7 +8068,7 @@ ul.icons {
   cursor: default;
   list-style: none;
   padding-left: 0;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
 }
 
 ul.icons li {
@@ -9679,7 +9684,7 @@ body.landing #page-wrapper {
 }
 
 body.landing #footer {
-  background-color: rgba(29, 36, 42, 0.9);
+  background-color: #2e3842;
 }
 
 body.is-mobile.landing #page-wrapper {

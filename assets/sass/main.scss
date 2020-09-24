@@ -26,15 +26,20 @@
 }
 
 .style6 {
-	background-color: darken(transparentize(_palette(bg), 0.6), 8) !important;
+	// background-color: darken(transparentize(_palette(bg), 0.6), 8) !important;
 	backdrop-filter: blur(8px);
 	margin: -1rem 0;
 	height: 10rem !important;
 	box-sizing: content-box;
 }
 
-#one,
-#two {
+.style7 {
+	background-color: darken(transparentize(_palette(bg), 0.9), 5) !important;
+	backdrop-filter: blur(10px);
+	margin-top: -1rem;
+}
+
+#one {
 	position: relative;
 	z-index: 1;
 }
@@ -946,7 +951,7 @@ ul.icons {
 	cursor: default;
 	list-style: none;
 	padding-left: 0;
-	font-size: 1.5rem;
+	font-size: 1.7rem;
 
 	li {
 		display: inline-block;
@@ -2103,7 +2108,7 @@ body.landing {
 	}
 
 	#footer {
-		background-color: darken(transparentize(_palette(bg), 0.1), 8);
+		background-color: darken(_palette(bg), 0.1);
 	}
 }
 
