@@ -18,38 +18,19 @@
 	<body class="landing is-preload">
 		<!-- Page Wrapper -->
 		<div id="page-wrapper">
-			<!-- Header -->
-			<!-- <header id="header" class="alt">
-				<h1><a href="index.html">Spectral</a></h1>
-				<nav id="nav">
-					<ul>
-						<li class="special">
-							<a href="#menu" class="menuToggle"><span>Menu</span></a>
-							<div id="menu">
-								<ul>
-									<li><a href="index.html">Home</a></li>
-									<li><a href="generic.html">Generic</a></li>
-									<li><a href="elements.html">Elements</a></li>
-									<li><a href="#">Sign Up</a></li>
-									<li><a href="#">Log In</a></li>
-								</ul>
-							</div>
-						</li>
-					</ul>
-				</nav>
-			</header> -->
-
 			<!-- Banner -->
 			<section id="banner">
 				<div class="inner">
 					<h2>I'm George</h2>
 					<p>
-						I'm a web developer<br />
-						some catchphrase<br />
+						a web developer<br />
+						more text here
 					</p>
 					<ul class="actions special">
 						<li>
-							<a href="#two" class="button primary scrolly">Contact</a>
+							<a href="#three" class="button primary scrolly"
+								>Contact</a
+							>
 						</li>
 					</ul>
 				</div>
@@ -161,7 +142,7 @@
 							src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=635&q=80"
 							alt=""
 					/></span>
-					<ul class="icons">
+					<!-- <ul class="icons">
 						<li>
 							<a href="#" class="icon brands fa-github"
 								><span class="label">Github</span></a
@@ -173,54 +154,146 @@
 							>
 						</li>
 						<li>
-							<a href="#" class="icon solid fa-envelope"
+							<a href="#" class="icon brands fa-stack-overflow"
 								><span class="label">Email</span></a
 							>
 						</li>
-					</ul>
+					</ul> -->
 					<p>
 						Donec hendrerit imperdiet. Mauris eleifend fringilla nullam
-						aenean ligula. Donec hendrerit et imperdiet. Mauris eleifend
-						fringilla nullam aenean mi ligula. Donec hendrerit imperdiet.
-						Mauris eleifend fringilla nullam aenean ligula. Donec
-						hendrerit imperdiet. Mauris eleifend fringilla nullam aenean
-						mi ligula.
+						aenean ligula.<br />
+						Donec hendrerit et imperdiet. Mauris eleifend fringilla
+						nullam <br />
+						aenean mi ligula. Donec hendrerit imperdiet.
 					</p>
+				</div>
+			</section>
+
+			<section id="three" class="wrapper style2 special">
+				<div class="inner">
+					<header class="major">
+						<h2>Contact Info</h2>
+					</header>
+
+					<div class="row gtr-uniform gtr-200">
+						<form
+							method="post"
+							action="#"
+							class="col-9 col-12-xsmall col-8-medium"
+						>
+							<div class="row gtr-uniform">
+								<div class="col-6 col-12-xsmall">
+									<input
+										type="text"
+										name="demo-name"
+										id="demo-name"
+										value=""
+										placeholder="Name"
+									/>
+								</div>
+								<div class="col-6 col-12-xsmall">
+									<input
+										type="email"
+										name="demo-email"
+										id="demo-email"
+										value=""
+										placeholder="Email"
+									/>
+								</div>
+								<div class="col-12">
+									<textarea
+										name="demo-message"
+										id="demo-message"
+										placeholder="Enter your message"
+										rows="6"
+									></textarea>
+								</div>
+								<div class="col-12">
+									<ul class="actions">
+										<li>
+											<input
+												type="submit"
+												value="Send Message"
+												class="primary"
+											/>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</form>
+
+						<div
+							class="col-3 col-12-xsmall col-4-medium contact-right-panel"
+						>
+							<h4>Email</h4>
+							<a
+								id="email"
+								class="tooltip secondary"
+								onclick="copyEmail('georgepopovich14@gmail.com', this)"
+								onmouseout="resetTooltip(this)"
+							>
+								<span class="tooltiptext">Copy</span
+								>georgepopovich14@gmail.com
+							</a>
+
+							<h4>Phone</h4>
+							<a
+								id="email"
+								class="tooltip secondary"
+								onclick="copyEmail('+382 69 397 895', this)"
+								onmouseout="resetTooltip(this)"
+							>
+								<span class="tooltiptext">Copy</span>+382 69 397 895
+							</a>
+
+							<h4>Social</h4>
+							<ul class="icons">
+								<li>
+									<a
+										href="https://github.com/g-popovic"
+										class="icon brands fa-github"
+										target="_blank"
+										><span class="label">Github</span></a
+									>
+								</li>
+								<li>
+									<a
+										href="#"
+										class="icon brands fa-linkedin"
+										target="_blank"
+										><span class="label">LinkedIn</span></a
+									>
+								</li>
+								<li>
+									<a
+										href="https://stackoverflow.com/users/9236901/george"
+										class="icon brands fa-stack-overflow"
+										target="_blank"
+										><span class="label">StackOverflow</span></a
+									>
+								</li>
+								<li>
+									<a
+										href="mailto:test@gmail.com"
+										target="_blank"
+										class="icon solid fa-envelope"
+										><span class="label">Email</span></a
+									>
+								</li>
+							</ul>
+						</div>
+					</div>
 				</div>
 			</section>
 
 			<!-- Footer -->
 			<footer id="footer">
-				<ul class="icons">
-					<li>
-						<a href="#" class="icon brands fa-twitter"
-							><span class="label">Twitter</span></a
-						>
-					</li>
-					<li>
-						<a href="#" class="icon brands fa-facebook-f"
-							><span class="label">Facebook</span></a
-						>
-					</li>
-					<li>
-						<a href="#" class="icon brands fa-instagram"
-							><span class="label">Instagram</span></a
-						>
-					</li>
-					<li>
-						<a href="#" class="icon brands fa-dribbble"
-							><span class="label">Dribbble</span></a
-						>
-					</li>
-					<li>
-						<a href="#" class="icon solid fa-envelope"
-							><span class="label">Email</span></a
-						>
-					</li>
-				</ul>
 				<ul class="copyright">
-					<li>&copy; Untitled</li>
-					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					<li>George Popovic</li>
+					<li>
+						Design:
+						<a href="http://html5up.net" target="_blank">HTML5 UP</a>
+					</li>
 				</ul>
 			</footer>
 		</div>
