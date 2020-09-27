@@ -2232,10 +2232,23 @@ textarea {
 	position: absolute;
 	top: 50%;
 	left: 50%;
+
+	transform: translate(-50%, -50%) scale(0);
+	transition: 0.3s ease !important;
+
 	font-size: 1.5rem;
-	transform: translate(-50%, -50%);
-	opacity: 0;
-	transition: opacity _duration(transitions) ease-in-out;
+	display: block;
+	width: 1.5rem;
+	height: 1.5rem;
+}
+
+@keyframes spin {
+	0% {
+		transform: translate(-50%, -50%) rotate(100deg);
+	}
+	100% {
+		transform: translate(-50%, -50%) rotate(460deg);
+	}
 }
 
 .email-button {
@@ -2244,21 +2257,53 @@ textarea {
 	&:focus {
 		outline: none;
 	}
+
+	.button-text {
+		transition: 0.3s 0.1s ease-in-out;
+		display: block;
+		transform: scale(1);
+	}
 }
 
 .primary.button-loading {
-	background-color: lighten(_palette(accent6, bg), 8);
+	background-color: lighten(_palette(accent6, bg), 10);
 	cursor: default;
+	overflow: hidden;
 
 	&:hover {
-		background-color: lighten(_palette(accent6, bg), 8) !important;
+		background-color: lighten(_palette(accent6, bg), 10) !important;
 	}
 
 	.loading-icon {
-		opacity: 1;
+		transition: 0.3s 0.1s ease-out !important;
+		transform: translate(-50%, -50%) scale(1) rotate(100deg);
+
+		animation: spin infinite linear 1s 0.4s !important;
 	}
 
 	.button-text {
+		transition: 0.3s ease !important;
+		transform: scale(1.5);
 		color: transparentize(_palette(accent6, fg-bold), 1);
 	}
+}
+
+*::selection {
+	background-color: lighten(_palette(accent6, bg), 15);
+}
+
+#successMessage {
+	transition: 0.3s ease-in-out;
+	overflow: hidden;
+	height: 4.5rem;
+	text-align: left;
+
+	@include breakpoint('<=small') {
+		height: 2.8rem;
+	}
+}
+
+.hide-message {
+	height: 0 !important;
+	padding-top: 0 !important;
 }

@@ -95,32 +95,40 @@ function resetTooltip(event) {
 }
 
 const emailForm = document.getElementById('emailForm');
-
-// emailForm.addEventListener('submit', e => {
-// 	e.preventDefault();
-
-// 	const request = new XMLHttpRequest();
-// 	request.open('post', 'https://formspree.io/xeqpoowe');
-// 	request.setRequestHeader('Accept', 'application/json');
-// 	request.onreadystatechange = () => {
-// 		if (request.readyState === 4) {
-// 			if (request.status === 200) {
-// 				alert('Success!');
-// 			} else {
-// 				alert('Message not sent: There was an unexpected error.');
-// 			}
-// 		}
-// 	};
-// 	request.send(new FormData(emailForm));
-// });
-
 emailForm.addEventListener('submit', e => {
 	e.preventDefault();
 
 	const button = document.getElementById('sendButton');
+	const successMessage = document.getElementById('successMessage');
+
 	button.className += ' button-loading';
 
-	setTimeout(() => {
-		button.classList.remove('button-loading');
-	}, 5000);
+	const request = new XMLHttpRequest();
+	request.open('post', 'https://formspree.io/xeqpoowe');
+	request.setRequestHeader('Accept', 'application/json');
+	request.onreadystatechange = () => {
+		if (request.readyState === 4) {
+			if (request.status === 200) {
+				successMessage.classList.remove('hide-message');
+			} else {
+				alert('Message not sent. There was an unexpected error.');
+			}
+			button.classList.remove('button-loading');
+		}
+	};
+	request.send(new FormData(emailForm));
 });
+
+// emailForm.addEventListener('submit', e => {
+// 	e.preventDefault();
+
+// 	const button = document.getElementById('sendButton');
+// 	const successMessage = document.getElementById('successMessage');
+
+// 	button.className += ' button-loading';
+
+// 	setTimeout(() => {
+// 		button.classList.remove('button-loading');
+// 		successMessage.classList.remove('hide-message');
+// 	}, 1000);
+// });

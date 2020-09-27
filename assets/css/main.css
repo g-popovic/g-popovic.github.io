@@ -9819,12 +9819,36 @@ textarea {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+  -webkit-transition: 0.3s ease !important;
+  transition: 0.3s ease !important;
   font-size: 1.5rem;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  opacity: 0;
-  -webkit-transition: opacity 0.2s ease-in-out;
-  transition: opacity 0.2s ease-in-out;
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(100deg);
+            transform: translate(-50%, -50%) rotate(100deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(460deg);
+            transform: translate(-50%, -50%) rotate(460deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(100deg);
+            transform: translate(-50%, -50%) rotate(100deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(460deg);
+            transform: translate(-50%, -50%) rotate(460deg);
+  }
 }
 
 .email-button {
@@ -9835,19 +9859,64 @@ textarea {
   outline: none;
 }
 
+.email-button .button-text {
+  -webkit-transition: 0.3s 0.1s ease-in-out;
+  transition: 0.3s 0.1s ease-in-out;
+  display: block;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
 .primary.button-loading {
-  background-color: #f06a58;
+  background-color: #f17362;
   cursor: default;
+  overflow: hidden;
 }
 
 .primary.button-loading:hover {
-  background-color: #f06a58 !important;
+  background-color: #f17362 !important;
 }
 
 .primary.button-loading .loading-icon {
-  opacity: 1;
+  -webkit-transition: 0.3s 0.1s ease-out !important;
+  transition: 0.3s 0.1s ease-out !important;
+  -webkit-transform: translate(-50%, -50%) scale(1) rotate(100deg);
+          transform: translate(-50%, -50%) scale(1) rotate(100deg);
+  -webkit-animation: spin infinite linear 1s 0.4s !important;
+          animation: spin infinite linear 1s 0.4s !important;
 }
 
 .primary.button-loading .button-text {
+  -webkit-transition: 0.3s ease !important;
+  transition: 0.3s ease !important;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
   color: rgba(255, 255, 255, 0);
+}
+
+*::-moz-selection {
+  background-color: #f38879;
+}
+
+*::selection {
+  background-color: #f38879;
+}
+
+#successMessage {
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  overflow: hidden;
+  height: 4.5rem;
+  text-align: left;
+}
+
+@media screen and (max-width: 736px) {
+  #successMessage {
+    height: 2.8rem;
+  }
+}
+
+.hide-message {
+  height: 0 !important;
+  padding-top: 0 !important;
 }
