@@ -93,3 +93,34 @@ function copyEmail(text, event) {
 function resetTooltip(event) {
 	event.getElementsByClassName('tooltiptext')[0].innerHTML = 'Copy';
 }
+
+const emailForm = document.getElementById('emailForm');
+
+// emailForm.addEventListener('submit', e => {
+// 	e.preventDefault();
+
+// 	const request = new XMLHttpRequest();
+// 	request.open('post', 'https://formspree.io/xeqpoowe');
+// 	request.setRequestHeader('Accept', 'application/json');
+// 	request.onreadystatechange = () => {
+// 		if (request.readyState === 4) {
+// 			if (request.status === 200) {
+// 				alert('Success!');
+// 			} else {
+// 				alert('Message not sent: There was an unexpected error.');
+// 			}
+// 		}
+// 	};
+// 	request.send(new FormData(emailForm));
+// });
+
+emailForm.addEventListener('submit', e => {
+	e.preventDefault();
+
+	const button = document.getElementById('sendButton');
+	button.className += ' button-loading';
+
+	setTimeout(() => {
+		button.classList.remove('button-loading');
+	}, 5000);
+});

@@ -177,45 +177,62 @@
 
 					<div class="row gtr-uniform gtr-200">
 						<form
-							method="post"
-							action="#"
 							class="col-9 col-12-xsmall col-8-medium"
+							id="emailForm"
 						>
 							<div class="row gtr-uniform">
 								<div class="col-6 col-12-xsmall">
 									<input
 										type="text"
-										name="demo-name"
-										id="demo-name"
+										name="name"
+										id="name"
 										value=""
 										placeholder="Name"
+										required="true"
 									/>
 								</div>
 								<div class="col-6 col-12-xsmall">
 									<input
 										type="email"
-										name="demo-email"
-										id="demo-email"
+										name="email"
+										id="email"
 										value=""
 										placeholder="Email"
+										required="true"
 									/>
 								</div>
 								<div class="col-12">
 									<textarea
-										name="demo-message"
-										id="demo-message"
+										name="message"
+										id="message"
 										placeholder="Enter your message"
 										rows="6"
+										required="true"
 									></textarea>
 								</div>
 								<div class="col-12">
-									<ul class="actions">
+									<ul class="actions not-stacked">
 										<li>
-											<input
+											<button
+												id="sendButton"
 												type="submit"
-												value="Send Message"
-												class="primary"
-											/>
+												class="button primary email-button"
+											>
+												<span class="button-text"
+													>Send Message</span
+												>
+												<span
+													class="fas fa-spinner loading-icon"
+												></span>
+											</button>
+										</li>
+										<li>
+											<a
+												href="mailto:georgepopovich14@gmail.com"
+												target="_blank"
+												class="button"
+												>Use Email Client</a
+											>
 										</li>
 									</ul>
 								</div>
@@ -226,25 +243,24 @@
 							class="col-3 col-12-xsmall col-4-medium contact-right-panel"
 						>
 							<h4>Email</h4>
-							<a
-								id="email"
-								class="tooltip secondary"
+							<div
+								class="email-wrapper tooltip"
 								onclick="copyEmail('georgepopovich14@gmail.com', this)"
 								onmouseout="resetTooltip(this)"
 							>
-								<span class="tooltiptext">Copy</span
-								>georgepopovich14@gmail.com
-							</a>
+								<span class="tooltiptext">Copy</span>
+								<a class="secondary">georgepopovich14@gmail.com</a>
+							</div>
 
 							<h4>Phone</h4>
-							<a
-								id="email"
-								class="tooltip secondary"
+							<div
+								class="email-wrapper tooltip"
 								onclick="copyEmail('+382 69 397 895', this)"
 								onmouseout="resetTooltip(this)"
 							>
-								<span class="tooltiptext">Copy</span>+382 69 397 895
-							</a>
+								<span class="tooltiptext">Copy</span>
+								<a class="secondary">+382 69 397 895</a>
+							</div>
 
 							<h4>Social</h4>
 							<ul class="icons">
@@ -274,7 +290,7 @@
 								</li>
 								<li>
 									<a
-										href="mailto:test@gmail.com"
+										href="mailto:georgepopovich14@gmail.com"
 										target="_blank"
 										class="icon solid fa-envelope"
 										><span class="label">Email</span></a

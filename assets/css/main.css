@@ -7994,6 +7994,17 @@ ul.actions.fit.stacked {
   ul.actions:not(.fixed) {
     margin-left: 0;
   }
+  ul.actions:not(.fixed).not-stacked {
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    width: 100% !important;
+  }
+  ul.actions:not(.fixed).not-stacked li {
+    padding: 1em 0 0 0;
+  }
   ul.actions:not(.fixed) li {
     -moz-flex-grow: 1;
     -ms-flex-grow: 1;
@@ -9068,7 +9079,7 @@ button:disabled,
 
 @media screen and (max-width: 736px) {
   .wrapper {
-    padding: 3em 2em 1em 2em ;
+    padding: 3em 2em 4em;
   }
   .wrapper.style7 {
     padding: 4em 2em 2em 2em ;
@@ -9721,7 +9732,7 @@ textarea {
 }
 
 .tooltip .tooltiptext {
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   visibility: hidden;
   background-color: #262e36;
   color: #fff;
@@ -9730,13 +9741,19 @@ textarea {
   padding: 0 0.8rem;
   position: absolute;
   z-index: 1;
-  top: 150%;
+  top: 70%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 736px) {
+  .tooltip .tooltiptext {
+    font-size: 0.7rem;
+  }
 }
 
 .tooltip .tooltiptext::after {
@@ -9753,17 +9770,33 @@ textarea {
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
+  top: 100%;
 }
 
 .contact-right-panel {
   text-align: left;
-  overflow: hidden;
 }
 
-.contact-right-panel .secondary {
-  color: rgba(255, 255, 255, 0.6);
-  text-overflow: ellipsis;
+.contact-right-panel .email-wrapper {
   margin: 0 0 2.6rem;
+  max-width: 100%;
+  position: relative;
+  display: inline-block;
+}
+
+.contact-right-panel .email-wrapper .secondary {
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 100%;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 1280px) {
+  .contact-right-panel .email-wrapper {
+    margin-bottom: 2rem;
+  }
 }
 
 @media screen and (max-width: 736px) {
@@ -9774,4 +9807,47 @@ textarea {
 
 .contact-right-panel h4 {
   margin: 0 0 0.6rem;
+}
+
+@media screen and (max-width: 736px) {
+  .contact-right-panel {
+    text-align: center;
+  }
+}
+
+.loading-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 1.5rem;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.email-button {
+  position: relative;
+}
+
+.email-button:focus {
+  outline: none;
+}
+
+.primary.button-loading {
+  background-color: #f06a58;
+  cursor: default;
+}
+
+.primary.button-loading:hover {
+  background-color: #f06a58 !important;
+}
+
+.primary.button-loading .loading-icon {
+  opacity: 1;
+}
+
+.primary.button-loading .button-text {
+  color: rgba(255, 255, 255, 0);
 }

@@ -880,14 +880,20 @@ ul.actions {
 
 	@include breakpoint('<=xsmall') {
 		&:not(.fixed) {
-			// @include vendor('flex-direction', 'column');
 			margin-left: 0;
-			// width: 100% !important;
+
+			&.not-stacked {
+				@include vendor('flex-direction', 'column');
+				width: 100% !important;
+
+				li {
+					padding: (_size(element-margin) * 0.5) 0 0 0;
+				}
+			}
 
 			li {
 				@include vendor('flex-grow', '1');
 				@include vendor('flex-shrink', '1');
-				// padding: (_size(element-margin) * 0.5) 0 0 0;
 				padding: 0 0 0 1rem;
 				text-align: center;
 				width: 100%;
@@ -1530,7 +1536,7 @@ button,
 	}
 
 	@include breakpoint('<=small') {
-		@include padding(3em, 2em);
+		padding: 3em 2em 4em;
 		&.style7 {
 			@include padding(4em, 2em);
 		}
@@ -2143,7 +2149,7 @@ textarea {
 }
 
 .tooltip .tooltiptext {
-	font-size: 0.7rem;
+	font-size: 0.9rem;
 	visibility: hidden;
 	background-color: darken(_palette(bg), 4);
 	color: #fff;
@@ -2152,11 +2158,15 @@ textarea {
 	padding: 0 0.8rem;
 	position: absolute;
 	z-index: 1;
-	top: 150%;
+	top: 70%;
 	left: 50%;
 	transform: translateX(-50%);
 	opacity: 0;
-	transition: opacity 0.3s;
+	transition: 0.3s;
+
+	@include breakpoint('<=small') {
+		font-size: 0.7rem;
+	}
 }
 
 .tooltip .tooltiptext::after {
@@ -2173,16 +2183,32 @@ textarea {
 .tooltip:hover .tooltiptext {
 	visibility: visible;
 	opacity: 1;
+	top: 100%;
 }
 
 .contact-right-panel {
 	text-align: left;
-	overflow: hidden;
 
-	.secondary {
-		color: _palette(fg-light);
-		text-overflow: ellipsis;
+	.email-wrapper {
 		margin: 0 0 2.6rem;
+		max-width: 100%;
+		position: relative;
+		display: inline-block;
+
+		.secondary {
+			color: _palette(fg-light);
+			max-width: 100%;
+			display: inline-block;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+	}
+
+	@include breakpoint('<=large') {
+		.email-wrapper {
+			margin-bottom: 2rem;
+		}
 	}
 
 	@include breakpoint('<=small') {
@@ -2193,5 +2219,46 @@ textarea {
 
 	h4 {
 		margin: 0 0 0.6rem;
+	}
+}
+
+@include breakpoint('<=small') {
+	.contact-right-panel {
+		text-align: center;
+	}
+}
+
+.loading-icon {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	font-size: 1.5rem;
+	transform: translate(-50%, -50%);
+	opacity: 0;
+	transition: opacity _duration(transitions) ease-in-out;
+}
+
+.email-button {
+	position: relative;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+.primary.button-loading {
+	background-color: lighten(_palette(accent6, bg), 8);
+	cursor: default;
+
+	&:hover {
+		background-color: lighten(_palette(accent6, bg), 8) !important;
+	}
+
+	.loading-icon {
+		opacity: 1;
+	}
+
+	.button-text {
+		color: transparentize(_palette(accent6, fg-bold), 1);
 	}
 }
