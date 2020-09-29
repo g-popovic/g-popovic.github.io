@@ -22,20 +22,48 @@
 			<section id="banner">
 				<div class="inner">
 					<h2>I'm George</h2>
-					<p>
-						a web developer<br />
-						more text here
-					</p>
+					<p>I'm a Web Developer</p>
 					<ul class="actions special">
 						<li>
 							<a href="#three" class="button primary scrolly"
-								>Contact</a
+								>Contact Info</a
 							>
 						</li>
 					</ul>
 				</div>
 				<a href="#one" class="more scrolly">Learn More</a>
 			</section>
+
+			<ul class="icons special sidebar hide-mobile">
+				<li>
+					<a
+						href="https://github.com/g-popovic"
+						class="sidebar-link"
+						target="_blank"
+					>
+						<span class="sidebar-link-name">Github</span>
+						<div class="icon-container">
+							<span class="icon brands fa-github"></span>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#" class="sidebar-link" target="_blank">
+						<span class="sidebar-link-name">LinkedIn</span>
+						<div class="icon-container">
+							<span class="icon brands fa-linkedin"></span>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#" class="sidebar-link" target="_blank">
+						<span class="sidebar-link-name">Resume</span>
+						<div class="icon-container">
+							<span class="icon solid fa-file"></span>
+						</div>
+					</a>
+				</li>
+			</ul>
 
 			<!-- One -->
 			<section id="one" class="wrapper style2 special">
@@ -176,12 +204,9 @@
 					</header>
 
 					<div class="row gtr-uniform gtr-200">
-						<form
-							class="col-9 col-12-xsmall col-8-medium"
-							id="emailForm"
-						>
+						<form class="col-9 col-12-medium" id="emailForm">
 							<div class="row gtr-uniform">
-								<div class="col-6 col-12-xsmall">
+								<div class="col-6 col-12-small">
 									<input
 										type="text"
 										name="name"
@@ -191,7 +216,7 @@
 										required="true"
 									/>
 								</div>
-								<div class="col-6 col-12-xsmall">
+								<div class="col-6 col-12-small">
 									<input
 										type="email"
 										name="email"
@@ -214,6 +239,7 @@
 									<p>
 										Message sent! I will reply as soon as I can.
 									</p>
+									<a onclick="closeSuccessMessage()">Close</a>
 								</div>
 								<div class="col-12">
 									<ul class="actions not-stacked">
@@ -244,9 +270,7 @@
 							</div>
 						</form>
 
-						<div
-							class="col-3 col-12-xsmall col-4-medium contact-right-panel"
-						>
+						<div class="col-3 col-12-medium contact-right-panel">
 							<h4>Email</h4>
 							<div
 								class="email-wrapper tooltip"
@@ -272,33 +296,37 @@
 								<li>
 									<a
 										href="https://github.com/g-popovic"
-										class="icon brands fa-github"
+										class="icon brands fa-github tooltip"
 										target="_blank"
-										><span class="label">Github</span></a
+										><span class="label">Github</span
+										><span class="tooltiptext">Github</span></a
 									>
 								</li>
 								<li>
 									<a
 										href="#"
-										class="icon brands fa-linkedin"
+										class="icon brands fa-linkedin tooltip"
 										target="_blank"
-										><span class="label">LinkedIn</span></a
-									>
-								</li>
-								<li>
-									<a
-										href="https://stackoverflow.com/users/9236901/george"
-										class="icon brands fa-stack-overflow"
-										target="_blank"
-										><span class="label">StackOverflow</span></a
+										><span class="label">LinkedIn</span
+										><span class="tooltiptext">LinkedIn</span></a
 									>
 								</li>
 								<li>
 									<a
 										href="mailto:georgepopovich14@gmail.com"
 										target="_blank"
-										class="icon solid fa-envelope"
-										><span class="label">Email</span></a
+										class="icon solid fa-envelope tooltip"
+										><span class="label">Email</span
+										><span class="tooltiptext">Email</span>
+									</a>
+								</li>
+								<li>
+									<a
+										href="https://stackoverflow.com/users/9236901/george"
+										class="icon solid fa-file tooltip"
+										target="_blank"
+										><span class="label">Resume</span
+										><span class="tooltiptext">Resume</span></a
 									>
 								</li>
 							</ul>

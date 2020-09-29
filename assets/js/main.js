@@ -110,6 +110,9 @@ emailForm.addEventListener('submit', e => {
 		if (request.readyState === 4) {
 			if (request.status === 200) {
 				successMessage.classList.remove('hide-message');
+				document.getElementById('message').value = '';
+				document.getElementById('name').value = '';
+				document.getElementById('email').value = '';
 			} else {
 				alert('Message not sent. There was an unexpected error.');
 			}
@@ -118,6 +121,10 @@ emailForm.addEventListener('submit', e => {
 	};
 	request.send(new FormData(emailForm));
 });
+
+function closeSuccessMessage() {
+	document.getElementById('successMessage').classList += ' hide-message';
+}
 
 // emailForm.addEventListener('submit', e => {
 // 	e.preventDefault();
