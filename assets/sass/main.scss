@@ -1761,6 +1761,7 @@ body.is-menu-visible {
 	overflow: hidden;
 	position: relative;
 	text-align: center;
+	z-index: 3;
 
 	h2 {
 		@include vendor('transform', 'scale(1)');
@@ -1863,6 +1864,10 @@ body.is-menu-visible {
 	@include breakpoint('<=small') {
 		@include padding(7em, 3em);
 		min-height: 0;
+
+		.more {
+			display: none;
+		}
 
 		h2 {
 			font-size: 1.25em;
@@ -2355,7 +2360,6 @@ select:-webkit-autofill:focus {
 .icons.sidebar {
 	margin: -0.5rem 0 2rem;
 	position: fixed;
-	z-index: 10;
 	flex-direction: column;
 	display: flex;
 	left: 0;
@@ -2368,7 +2372,7 @@ select:-webkit-autofill:focus {
 		background: darken(_palette(bg), 5);
 		position: relative;
 		transform: translateX(-100%);
-		// transform: translateX(0);
+		width: fit-content;
 		transition: 0.5s ease !important;
 		box-shadow: 10px -1px 0 0 inset rgba(0, 0, 0, 0.2);
 
@@ -2391,10 +2395,17 @@ select:-webkit-autofill:focus {
 			}
 		}
 
+		&:nth-child(3),
+		&:nth-child(4) {
+			.icon {
+				font-size: 1.5rem;
+			}
+		}
+
 		a {
 			border: none;
 			width: fit-content;
-			padding: 0.8rem 0.5rem 0.8rem 1.3rem !important;
+			padding: 0.9rem 0.5rem 0.7rem 1.8rem !important;
 
 			.sidebar-link-name {
 				display: inline-block;
@@ -2410,7 +2421,7 @@ select:-webkit-autofill:focus {
 			position: absolute;
 			right: 0;
 			top: 50%;
-			transform: translate(100%, -50%);
+			transform: translate(98%, -50%);
 			background: darken(_palette(bg), 5);
 			height: 100%;
 			width: 3.1rem;
@@ -2423,7 +2434,7 @@ select:-webkit-autofill:focus {
 		}
 
 		.icon {
-			font-size: 1.9rem;
+			font-size: 1.7rem;
 		}
 
 		&:hover {
@@ -2438,6 +2449,6 @@ select:-webkit-autofill:focus {
 
 @include breakpoint('<=small') {
 	.hide-mobile {
-		display: none;
+		display: none !important;
 	}
 }

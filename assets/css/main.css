@@ -9326,6 +9326,7 @@ body.is-menu-visible #menu {
   overflow: hidden;
   position: relative;
   text-align: center;
+  z-index: 3;
 }
 
 #banner h2 {
@@ -9441,6 +9442,9 @@ body.is-menu-visible #menu {
   #banner {
     padding: 7em 3em 5em 3em ;
     min-height: 0;
+  }
+  #banner .more {
+    display: none;
   }
   #banner h2 {
     font-size: 1.25em;
@@ -9968,7 +9972,6 @@ select:-webkit-autofill:focus {
 .icons.sidebar {
   margin: -0.5rem 0 2rem;
   position: fixed;
-  z-index: 10;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -9989,6 +9992,9 @@ select:-webkit-autofill:focus {
   position: relative;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   -webkit-transition: 0.5s ease !important;
   transition: 0.5s ease !important;
   -webkit-box-shadow: 10px -1px 0 0 inset rgba(0, 0, 0, 0.2);
@@ -10011,12 +10017,16 @@ select:-webkit-autofill:focus {
   border-radius: 0 0 3px 0;
 }
 
+.icons.sidebar li:nth-child(3) .icon, .icons.sidebar li:nth-child(4) .icon {
+  font-size: 1.5rem;
+}
+
 .icons.sidebar li a {
   border: none;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  padding: 0.8rem 0.5rem 0.8rem 1.3rem !important;
+  padding: 0.9rem 0.5rem 0.7rem 1.8rem !important;
 }
 
 .icons.sidebar li a .sidebar-link-name {
@@ -10032,8 +10042,8 @@ select:-webkit-autofill:focus {
   position: absolute;
   right: 0;
   top: 50%;
-  -webkit-transform: translate(100%, -50%);
-          transform: translate(100%, -50%);
+  -webkit-transform: translate(98%, -50%);
+          transform: translate(98%, -50%);
   background: #242b33;
   height: 100%;
   width: 3.1rem;
@@ -10052,7 +10062,7 @@ select:-webkit-autofill:focus {
 }
 
 .icons.sidebar li .icon {
-  font-size: 1.9rem;
+  font-size: 1.7rem;
 }
 
 .icons.sidebar li:hover {
@@ -10066,6 +10076,6 @@ select:-webkit-autofill:focus {
 
 @media screen and (max-width: 736px) {
   .hide-mobile {
-    display: none;
+    display: none !important;
   }
 }
