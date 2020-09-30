@@ -7501,7 +7501,8 @@ article.special {
   text-align: center;
 }
 
-header p {
+header p,
+header ul {
   color: rgba(255, 255, 255, 0.6);
   position: relative;
   top: -0.25em;
@@ -10050,6 +10051,7 @@ select:-webkit-autofill:focus {
   border: none;
   -webkit-box-shadow: 0 -1px 0 0 inset rgba(0, 0, 0, 0.2);
           box-shadow: 0 -1px 0 0 inset rgba(0, 0, 0, 0.2);
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10077,5 +10079,23 @@ select:-webkit-autofill:focus {
 @media screen and (max-width: 736px) {
   .hide-mobile {
     display: none !important;
+  }
+}
+
+.project header {
+  text-align: left;
+}
+
+.project em {
+  font-style: normal;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 3px;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+}
+
+@media screen and (max-width: 736px) {
+  .project br {
+    display: none;
   }
 }

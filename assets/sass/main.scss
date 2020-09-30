@@ -439,7 +439,8 @@ article {
 }
 
 header {
-	p {
+	p,
+	ul {
 		color: _palette(fg-light);
 		position: relative;
 		top: -0.25em;
@@ -2246,10 +2247,6 @@ textarea {
 		.not-stacked {
 			justify-content: space-between;
 		}
-
-		// input:-webkit-autofill {
-		// background-color: _palette(accent1, bg) !important;
-		// }
 	}
 }
 
@@ -2427,6 +2424,7 @@ select:-webkit-autofill:focus {
 			width: 3.1rem;
 			border: none;
 			box-shadow: 0 -1px 0 0 inset rgba(0, 0, 0, 0.2);
+			overflow: hidden;
 
 			display: flex;
 			align-items: center;
@@ -2450,5 +2448,26 @@ select:-webkit-autofill:focus {
 @include breakpoint('<=small') {
 	.hide-mobile {
 		display: none !important;
+	}
+}
+
+.project {
+	header {
+		text-align: left;
+	}
+
+	em {
+		font-style: normal;
+		// border: 2px solid rgba(255, 255, 255, 0.4);
+		background: rgba(255, 255, 255, 0.06);
+		border-radius: 3px;
+		padding-left: 0.3rem;
+		padding-right: 0.3rem;
+	}
+
+	@include breakpoint('<=small') {
+		br {
+			display: none;
+		}
 	}
 }
