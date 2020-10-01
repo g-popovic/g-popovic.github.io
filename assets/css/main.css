@@ -9444,9 +9444,6 @@ body.is-menu-visible #menu {
     padding: 7em 3em 5em 3em ;
     min-height: 0;
   }
-  #banner .more {
-    display: none;
-  }
   #banner h2 {
     font-size: 1.25em;
   }
@@ -10098,4 +10095,12 @@ select:-webkit-autofill:focus {
   .project br {
     display: none;
   }
+}
+
+#banner .primary {
+  width: auto !important;
+}
+
+#two br {
+  display: none;
 }

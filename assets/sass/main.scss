@@ -1867,7 +1867,7 @@ body.is-menu-visible {
 		min-height: 0;
 
 		.more {
-			display: none;
+			// display: none;
 		}
 
 		h2 {
@@ -2471,4 +2471,12 @@ select:-webkit-autofill:focus {
 			display: none;
 		}
 	}
+}
+
+#banner .primary {
+	width: auto !important;
+}
+
+#two br {
+	display: none;
 }
