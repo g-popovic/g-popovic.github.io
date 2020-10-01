@@ -10101,6 +10101,8 @@ select:-webkit-autofill:focus {
   width: auto !important;
 }
 
-#two br {
-  display: none;
+@media screen and (max-width: 736px) {
+  #two br {
+    display: none;
+  }
 }

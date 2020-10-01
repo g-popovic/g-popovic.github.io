@@ -2478,5 +2478,7 @@ select:-webkit-autofill:focus {
 }
 
 #two br {
-	display: none;
+	@include breakpoint('<=small') {
+		display: none;
+	}
 }
