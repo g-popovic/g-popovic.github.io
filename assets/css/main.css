@@ -10040,8 +10040,8 @@ select:-webkit-autofill:focus {
   position: absolute;
   right: 0;
   top: 50%;
-  -webkit-transform: translate(98%, -50%);
-          transform: translate(98%, -50%);
+  -webkit-transform: translate(100%, -50%);
+          transform: translate(100%, -50%);
   background: rgba(15, 18, 21, 0.3);
   height: 100%;
   width: 3.1rem;

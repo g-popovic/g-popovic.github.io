@@ -2419,8 +2419,7 @@ select:-webkit-autofill:focus {
 			position: absolute;
 			right: 0;
 			top: 50%;
-			transform: translate(98%, -50%);
-			// background: darken(_palette(bg), 5);
+			transform: translate(100%, -50%);
 			background: transparentize(darken(_palette(bg), 15), 0.7);
 
 			height: 100%;
