@@ -9528,8 +9528,8 @@ body.is-preload #banner:after {
 /* Main */
 #main > header {
   padding: 12em 0 10em 0 ;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0,0,0,0.6)), to(rgba(0,0,0,0.6))), url("../../images/banner.jpg");
-  background-image: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("../../images/banner.jpg");
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0,0,0,0.3)), to(rgba(0,0,0,0.3))), url("../../images/banner.jpg");
+  background-image: linear-gradient(to top, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../../images/banner.jpg");
   background-attachment: fixed;
   background-position: center center;
   background-repeat: no-repeat;
@@ -9661,8 +9661,8 @@ body.is-mobile #main > header {
 
 /* Landing */
 body.landing #page-wrapper {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0,0,0,0.6)), to(rgba(0,0,0,0.6))), url("../../images/banner.jpg");
-  background-image: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("../../images/banner.jpg");
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0,0,0,0.3)), to(rgba(0,0,0,0.3))), url("../../images/banner.jpg");
+  background-image: linear-gradient(to top, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../../images/banner.jpg");
   background-attachment: fixed;
   background-position: center center;
   background-repeat: no-repeat;
@@ -9704,9 +9704,9 @@ body.landing #footer {
 }
 
 .style7 {
-  background-color: rgba(36, 43, 51, 0.1);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  background-color: rgba(42, 51, 60, 0.1);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
   margin: -1rem 0;
 }
 
@@ -9986,7 +9986,7 @@ select:-webkit-autofill:focus {
 .icons.sidebar li {
   margin: 0;
   padding: 0 !important;
-  background: #242b33;
+  background: rgba(15, 18, 21, 0.3);
   position: relative;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
@@ -10042,7 +10042,7 @@ select:-webkit-autofill:focus {
   top: 50%;
   -webkit-transform: translate(98%, -50%);
           transform: translate(98%, -50%);
-  background: #242b33;
+  background: rgba(15, 18, 21, 0.3);
   height: 100%;
   width: 3.1rem;
   border: none;

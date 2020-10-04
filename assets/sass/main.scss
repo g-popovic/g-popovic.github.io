@@ -1954,7 +1954,7 @@ body.is-preload {
 		@include vendor(
 			'background-image',
 			(
-				'linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.6))',
+				'linear-gradient(to top, rgba(0,0,0,0.3), rgba(0,0,0,0.3))',
 				'url("../../images/banner.jpg")'
 			)
 		);
@@ -2087,7 +2087,7 @@ body.landing {
 		@include vendor(
 			'background-image',
 			(
-				'linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.6))',
+				'linear-gradient(to top, rgba(0,0,0,0.3), rgba(0,0,0,0.3))',
 				'url("../../images/banner.jpg")'
 			)
 		);
@@ -2129,8 +2129,8 @@ body.landing {
 }
 
 .style7 {
-	background-color: darken(transparentize(_palette(bg), 0.9), 5);
-	backdrop-filter: blur(10px);
+	background-color: darken(transparentize(_palette(bg), 0.9), 2);
+	backdrop-filter: blur(4px);
 	margin: -1rem 0;
 }
 
@@ -2367,7 +2367,7 @@ select:-webkit-autofill:focus {
 	li {
 		margin: 0;
 		padding: 0 !important;
-		background: darken(_palette(bg), 5);
+		background: transparentize(darken(_palette(bg), 15), 0.7);
 		position: relative;
 		transform: translateX(-100%);
 		width: fit-content;
@@ -2420,7 +2420,9 @@ select:-webkit-autofill:focus {
 			right: 0;
 			top: 50%;
 			transform: translate(98%, -50%);
-			background: darken(_palette(bg), 5);
+			// background: darken(_palette(bg), 5);
+			background: transparentize(darken(_palette(bg), 15), 0.7);
+
 			height: 100%;
 			width: 3.1rem;
 			border: none;
