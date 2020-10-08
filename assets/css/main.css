@@ -9986,7 +9986,7 @@ select:-webkit-autofill:focus {
 .icons.sidebar li {
   margin: 0;
   padding: 0 !important;
-  background: rgba(15, 18, 21, 0.3);
+  background: rgba(15, 18, 21, 0.2);
   position: relative;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
@@ -10042,7 +10042,7 @@ select:-webkit-autofill:focus {
   top: 50%;
   -webkit-transform: translate(100%, -50%);
           transform: translate(100%, -50%);
-  background: rgba(15, 18, 21, 0.3);
+  background: rgba(15, 18, 21, 0.2);
   height: 100%;
   width: 3.1rem;
   border: none;
