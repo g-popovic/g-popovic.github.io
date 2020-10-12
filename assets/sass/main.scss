@@ -1863,7 +1863,7 @@ body.is-menu-visible {
 	}
 
 	@include breakpoint('<=small') {
-		@include padding(7em, 3em);
+		@include padding(7em, 1em);
 		min-height: 0;
 
 		.more {
@@ -2305,7 +2305,7 @@ select:-webkit-autofill:focus {
 
 .primary.button-loading {
 	background-color: lighten(_palette(accent6, bg), 10);
-	cursor: default;
+	cursor: not-allowed;
 	overflow: hidden;
 
 	&:hover {
@@ -2482,4 +2482,9 @@ select:-webkit-autofill:focus {
 	@include breakpoint('<=small') {
 		display: none;
 	}
+}
+
+.button-disabled:hover {
+	cursor: not-allowed;
+	background: none;
 }
