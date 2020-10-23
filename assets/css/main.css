@@ -9986,7 +9986,7 @@ select:-webkit-autofill:focus {
 .icons.sidebar li {
   margin: 0;
   padding: 0 !important;
-  background: rgba(15, 18, 21, 0.2);
+  background: rgba(15, 18, 21, 0.15);
   position: relative;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
@@ -10042,7 +10042,9 @@ select:-webkit-autofill:focus {
   top: 50%;
   -webkit-transform: translate(100%, -50%);
           transform: translate(100%, -50%);
-  background: rgba(15, 18, 21, 0.2);
+  background: rgba(15, 18, 21, 0.15);
+  -webkit-transition: 0.5s ease !important;
+  transition: 0.5s ease !important;
   height: 100%;
   width: 3.1rem;
   border: none;
@@ -10067,10 +10069,14 @@ select:-webkit-autofill:focus {
 .icons.sidebar li:hover {
   -webkit-transform: translateX(0);
           transform: translateX(0);
+  background: rgba(15, 18, 21, 0.5);
 }
 
 .icons.sidebar li:hover .icon-container {
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 5px 5px 0;
+  background: rgba(15, 18, 21, 0.5);
+  -webkit-transition: 0.5s ease !important;
+  transition: 0.5s ease !important;
 }
 
 @media screen and (max-width: 736px) {
