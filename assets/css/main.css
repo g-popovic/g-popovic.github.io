@@ -7936,6 +7936,10 @@ ul.actions li {
   vertical-align: middle;
 }
 
+ul.actions li:first-child {
+  padding-left: 0;
+}
+
 ul.actions.special {
   -moz-justify-content: center;
   -ms-justify-content: center;
@@ -8039,6 +8043,10 @@ ul.actions.fit.stacked {
   ul.actions:not(.fixed) li .button.icon:before {
     margin-left: -0.5em;
   }
+}
+
+.not-stacked {
+  margin-left: 0 !important;
 }
 
 /* Icons */
@@ -8724,7 +8732,7 @@ button:disabled,
 }
 
 .wrapper.style2 {
-  background-color: #2e3842;
+  background: rgba(46, 56, 66, 0.92);
 }
 
 .wrapper.style3 {
@@ -9587,7 +9595,7 @@ body.is-mobile #main > header {
 
 /* Footer */
 #footer {
-  padding: 6em 0 4em 0 ;
+  padding: 3.5em 0 1.5em 0 ;
   background-color: rgba(29, 36, 42, 0.9);
   text-align: center;
   position: relative;
@@ -9705,9 +9713,6 @@ body.landing #footer {
 
 .style7 {
   background-color: rgba(42, 51, 60, 0.1);
-  -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
-  margin: -1rem 0;
 }
 
 #one,
@@ -9995,8 +10000,6 @@ select:-webkit-autofill:focus {
   width: fit-content;
   -webkit-transition: 0.5s ease !important;
   transition: 0.5s ease !important;
-  -webkit-box-shadow: 10px -1px 0 0 inset rgba(0, 0, 0, 0.2);
-          box-shadow: 10px -1px 0 0 inset rgba(0, 0, 0, 0.2);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   text-align: left;
@@ -10048,8 +10051,6 @@ select:-webkit-autofill:focus {
   height: 100%;
   width: 3.1rem;
   border: none;
-  -webkit-box-shadow: 0 -1px 0 0 inset rgba(0, 0, 0, 0.2);
-          box-shadow: 0 -1px 0 0 inset rgba(0, 0, 0, 0.2);
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -10091,10 +10092,9 @@ select:-webkit-autofill:focus {
 
 .project em {
   font-style: normal;
-  background: rgba(255, 255, 255, 0.06);
-  border-radius: 3px;
-  padding-left: 0.3rem;
-  padding-right: 0.3rem;
+  font-family: 'Consolas';
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0);
 }
 
 @media screen and (max-width: 736px) {
@@ -10116,4 +10116,68 @@ select:-webkit-autofill:focus {
 .button-disabled:hover {
   cursor: not-allowed;
   background: none;
+}
+
+.project-img {
+  height: 16rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+@media screen and (min-width: 737px) {
+  .hide-desktop {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+.project-img-container {
+  margin-bottom: 1.5rem !important;
+}
+
+.project h3 {
+  margin-bottom: 0.8rem;
+}
+
+@media screen and (min-width: 737px) {
+  .project-img-container {
+    position: relative;
+  }
+  .project-img-container .actions {
+    position: absolute;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+  }
+  .project-img-container:hover .actions {
+    opacity: 1;
+  }
+}
+
+.about-me {
+  max-width: 38rem;
+  text-align: center;
+  margin: 0 auto 2rem;
 }
