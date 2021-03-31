@@ -10090,6 +10090,10 @@ select:-webkit-autofill:focus {
   text-align: left;
 }
 
+.project header > p:not(.project-date) {
+  margin-bottom: 0.2rem;
+}
+
 .project em {
   font-style: normal;
   font-family: 'Consolas';
@@ -10176,6 +10180,11 @@ select:-webkit-autofill:focus {
   }
 }
 
+.at {
+  font-weight: 300;
+  opacity: 0.6;
+}
+
 .about-me {
   max-width: 38rem;
   text-align: center;
@@ -10183,6 +10192,6 @@ select:-webkit-autofill:focus {
 }
 
 .project-date {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
   font-weight: 600;
 }

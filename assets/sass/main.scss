@@ -1816,10 +1816,7 @@ body.is-menu-visible {
 	}
 
 	.more {
-		@include vendor(
-			'transition',
-			('transform 0.75s ease', 'opacity 0.75s ease')
-		);
+		@include vendor('transition', ('transform 0.75s ease', 'opacity 0.75s ease'));
 		@include vendor('transition-delay', '3.5s');
 		@include vendor('transform', 'translate(-50%, 0)');
 
@@ -2468,6 +2465,10 @@ select:-webkit-autofill:focus {
 .project {
 	header {
 		text-align: left;
+
+		& > p:not(.project-date) {
+			margin-bottom: 0.2rem;
+		}
 	}
 
 	em {
@@ -2555,6 +2556,12 @@ select:-webkit-autofill:focus {
 	}
 }
 
+.at {
+	// font-style: italic;
+	font-weight: 300;
+	opacity: 0.6;
+}
+
 .about-me {
 	max-width: 38rem;
 	text-align: center;
@@ -2562,6 +2569,6 @@ select:-webkit-autofill:focus {
 }
 
 .project-date {
-	margin-bottom: 0.5rem;
+	margin-bottom: 0.6rem;
 	font-weight: 600;
 }
