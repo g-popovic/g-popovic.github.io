@@ -10182,7 +10182,8 @@ select:-webkit-autofill:focus {
 
 .at {
   font-weight: 300;
-  opacity: 0.6;
+  opacity: 0.5;
+  margin: 0 0.2rem;
 }
 
 .about-me {
@@ -10194,4 +10195,5 @@ select:-webkit-autofill:focus {
 .project-date {
   margin-bottom: 0.6rem;
   font-weight: 600;
+  text-transform: uppercase;
 }
