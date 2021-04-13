@@ -1837,7 +1837,7 @@ input[type='submit']:disabled {
 	}
 }
 .wrapper.style2 {
-	background: rgba(46, 56, 66, 0.92);
+	background: rgba(46, 56, 66, 0.95);
 }
 .wrapper.style3 {
 	background-color: #505393;
@@ -2173,46 +2173,47 @@ input[type='submit']:disabled {
 	color: inherit;
 }
 #banner .more {
-	-webkit-transition: -webkit-transform 0.75s ease, opacity 0.75s ease;
-	-webkit-transition: opacity 0.75s ease, -webkit-transform 0.75s ease;
 	transition: opacity 0.75s ease, -webkit-transform 0.75s ease;
 	transition: transform 0.75s ease, opacity 0.75s ease;
 	transition: transform 0.75s ease, opacity 0.75s ease, -webkit-transform 0.75s ease;
-	-webkit-transition-delay: 3.5s;
 	transition-delay: 3.5s;
-	-webkit-transform: translate(-50%, 0);
-	transform: translate(-50%, 0);
 	border: none;
 	bottom: 0;
 	color: inherit;
-	font-size: 0.8em;
-	height: 8.5em;
-	left: 50%;
-	letter-spacing: 0.225em;
-	-webkit-transform: translateX(-50%);
-	transform: translateX(-50%);
 	opacity: 1;
 	outline: 0;
-	padding-left: 0.225em;
 	position: absolute;
-	text-align: center;
-	text-transform: uppercase;
-	width: 16em;
+	width: 100%;
 	z-index: 1;
+	padding-bottom: 3.44rem;
+
+	.scrolly {
+		font-size: 0.8em;
+		letter-spacing: 0.225em;
+		text-transform: uppercase;
+		border-bottom: none;
+		text-align: center;
+	}
 }
-#banner .more:after {
+#banner .scrolly:after {
 	background-image: url(https://g-popovic.github.io/assets/css/images/arrow.svg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
-	bottom: 4em;
 	content: '';
 	display: block;
-	height: 1.5em;
-	left: 50%;
-	margin: 0 0 0 -0.75em;
-	position: absolute;
-	width: 1.5em;
+	height: 1.4rem;
+	width: 1.4rem;
+	margin: 0.9rem auto 0;
+	position: relative;
+	left: -1px;
+	// bottom: 4em;
+	// display: block;
+	// height: 1.5em;
+	// left: 50%;
+	// margin: 0 0 0 -0.75em;
+	// position: absolute;
+	// width: 1.5em;
 }
 #banner:after {
 	pointer-events: none;
@@ -2249,8 +2250,7 @@ body.is-preload #banner h2:before {
 	width: 0;
 }
 body.is-preload #banner .more {
-	-webkit-transform: translate(-50%, 8.5em);
-	transform: translate(-50%, 8.5em);
+	transform: translateY(8.25rem);
 	opacity: 0;
 }
 body.is-preload #banner:after {
@@ -2384,7 +2384,7 @@ body.landing #page-wrapper {
 	background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
 		url(https://g-popovic.github.io/images/banner.jpg);
 	background-attachment: fixed;
-	background-position: center center;
+	background-position: center 47%;
 	background-repeat: no-repeat;
 	background-size: cover;
 	padding-top: 0;
@@ -2396,9 +2396,7 @@ body.landing #footer {
 	border-radius: 8rem;
 	height: 16rem;
 	width: 12rem;
-	-o-object-fit: cover;
 	object-fit: cover;
-	-o-object-position: center;
 	object-position: center;
 	margin-bottom: 3rem;
 	margin-top: 0;
@@ -2764,9 +2762,7 @@ textarea:-webkit-autofill:hover {
 }
 .project-img {
 	height: 16rem;
-	-o-object-fit: cover;
 	object-fit: cover;
-	-o-object-position: center;
 	object-position: center;
 }
 @media screen and (min-width: 737px) {
@@ -2820,7 +2816,7 @@ textarea:-webkit-autofill:hover {
 	margin: 0 0.2rem;
 }
 .about-me {
-	max-width: 30rem;
+	max-width: 31rem;
 	text-align: center;
 	margin: 0 auto 2rem;
 }
