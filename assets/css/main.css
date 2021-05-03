@@ -3193,7 +3193,7 @@ textarea:-webkit-autofill:hover {
 
 .about-me {
   max-width: 31rem;
-  text-align: center;
+  text-align: justify;
   margin: 0 auto 2rem;
 }
 
