@@ -3216,3 +3216,7 @@ textarea:-webkit-autofill:hover {
 .project-mobile-buttons > * a {
   width: 100%;
 }
+
+.project li {
+  text-align: justify;
+}
