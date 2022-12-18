@@ -24,7 +24,6 @@ function resetTooltip(event) {
 
 const emailForm = document.getElementById('emailForm');
 emailForm.addEventListener('submit', e => {
-	console.log('LMAO');
 	e.preventDefault();
 
 	const button = document.getElementById('sendButton');
