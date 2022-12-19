@@ -54,6 +54,14 @@ function closeSuccessMessage() {
 	document.getElementById('successMessage').classList += ' hide-message';
 }
 
+// Only render the banner image after the text animation is done
+// to prevent its rendering from slowing down the animation
+const NAME_LINES_ANIMATION_DURATION = 1100;
+const bannerImage = document.getElementById('banner-img');
+setTimeout(() => {
+	bannerImage.style = '';
+}, NAME_LINES_ANIMATION_DURATION + 100); // 100ms preload delay
+
 // emailForm.addEventListener('submit', e => {
 // 	e.preventDefault();
 
