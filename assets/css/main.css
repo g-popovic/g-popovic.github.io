@@ -1283,6 +1283,10 @@ body.landing #page-wrapper {
      object-position: 0 47%;
 }
 
+.img-blur {
+  filter: blur(8px);
+}
+
 .banner-img-gradient {
   position: absolute;
   width: 100%;

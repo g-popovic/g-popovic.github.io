@@ -1049,9 +1049,7 @@ input[type='submit']:disabled {
 }
 #banner h2:after,
 #banner h2:before {
-	-webkit-transition: width 0.85s ease;
 	transition: width 0.85s ease;
-	-webkit-transition-delay: 0.25s;
 	transition-delay: 0.25s;
 	background: #fff;
 	content: '';
@@ -1235,6 +1233,9 @@ body.landing #page-wrapper {
 	height: 100%;
 	object-fit: cover;
 	object-position: 0 47%;
+}
+.img-blur {
+	filter: blur(8px);
 }
 .banner-img-gradient {
 	position: absolute;
