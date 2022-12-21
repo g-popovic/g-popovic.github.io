@@ -1229,10 +1229,11 @@ body.landing #page-wrapper {
 }
 .banner-img {
 	position: absolute;
-	width: 100%;
+	width: 110%;
 	height: 100%;
 	object-fit: cover;
-	object-position: 0 47%;
+	left: -1rem;
+	object-position: 00% 40%;
 }
 .img-blur {
 	filter: blur(8px);
@@ -1242,7 +1243,7 @@ body.landing #page-wrapper {
 	width: 100%;
 	height: 100%;
 	// TODO: Maybe make this radial?
-	background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+	background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
 	background-size: cover;
 }
 body.landing #footer {
