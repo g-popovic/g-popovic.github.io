@@ -684,7 +684,7 @@ textarea {
   text-rendering: auto;
   line-height: 1;
   text-transform: none !important;
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 6 Free";
   font-weight: 400;
 }
 
@@ -701,7 +701,7 @@ textarea {
 }
 
 .icon.brands:before {
-  font-family: "Font Awesome 5 Brands";
+  font-family: "Font Awesome 6 Brands";
 }
 
 .image {
@@ -1666,7 +1666,7 @@ textarea:-webkit-autofill:hover {
 }
 
 .project header > p:not(.project-date) {
-  margin-bottom: 1.8rem;
+  margin-bottom: 0.8rem;
 }
 
 .project em {
@@ -1682,6 +1682,7 @@ textarea:-webkit-autofill:hover {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+  transition: 0.3s ease;
 }
 
 @media screen and (min-width: 737px) {
@@ -1708,9 +1709,6 @@ textarea:-webkit-autofill:hover {
 @media screen and (max-width: 736px) {
   .project br {
     display: none;
-  }
-  .project header > p:not(.project-date) {
-    margin-bottom: 0.8rem;
   }
 }
 #banner .primary {
@@ -1743,6 +1741,7 @@ textarea:-webkit-autofill:hover {
 @media screen and (min-width: 737px) {
   .project-img-container {
     position: relative;
+    overflow: hidden;
   }
   .project-img-container .actions {
     position: absolute;
@@ -1755,12 +1754,20 @@ textarea:-webkit-autofill:hover {
     margin: 0;
     padding: 0;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.3);
     opacity: 0;
     transition: opacity 0.3s ease;
   }
   .project-img-container:hover .actions {
     opacity: 1;
+    -webkit-backdrop-filter: blur(6px);
+            backdrop-filter: blur(6px);
+  }
+  .project-img-container:hover .project-img {
+    transform: scale(1.03);
+  }
+  .project-img-container:hover .project-img-icons {
+    opacity: 0;
   }
 }
 .at {
@@ -1781,19 +1788,44 @@ textarea:-webkit-autofill:hover {
   text-transform: uppercase;
 }
 
-.project-buttons {
+.project li {
+  text-align: justify;
+}
+
+.project-img-icons {
+  position: absolute;
+  display: flex;
+  right: 0;
+  bottom: 0;
+  justify-content: start;
+  font-size: 1.4rem;
+  padding: 1rem;
+  transition: opacity 0.3s ease;
+}
+.project-img-icons .fa-github::before {
+  font-size: 120%;
+}
+.project-img-icons > * {
+  margin-right: 1.5rem;
+  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.15);
+}
+.project-img-icons > *:last-child {
+  margin-right: 0;
+}
+
+.project-mobile-buttons {
   margin: 0;
 }
-.project-buttons > * {
+.project-mobile-buttons > * {
   flex-grow: 1;
 }
-.project-buttons > * a {
+.project-mobile-buttons > * a {
   width: 100%;
 }
-.project-buttons:last-child {
+.project-mobile-buttons:last-child {
   margin-top: auto;
 }
 
-.project li {
-  text-align: justify;
+.button.fa-github::before {
+  font-size: 115%;
 }
