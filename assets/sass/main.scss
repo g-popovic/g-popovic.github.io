@@ -129,7 +129,6 @@ textarea {
 	}
 }
 a {
-	-webkit-transition: color 0.2s ease, border-bottom-color 0.2s ease;
 	transition: color 0.2s ease, border-bottom-color 0.2s ease;
 	border-bottom: dotted 1px;
 	color: inherit;
@@ -1234,7 +1233,7 @@ body.landing #page-wrapper {
 	height: 100%;
 	object-fit: cover;
 	left: -1rem;
-	object-position: 00% 40%;
+	object-position: 50% 40%;
 }
 .img-blur {
 	filter: blur(8px);
@@ -1584,6 +1583,22 @@ $icon-sidebar-container-width: 3.1rem;
 		margin-bottom: 3rem;
 	}
 }
+#one .project {
+	a:not(.button) {
+		border-bottom: 1px dotted rgba(255, 255, 255, 0.6);
+		padding-bottom: 0.3rem;
+		transition: 0.2s ease;
+
+		&:hover {
+			border-color: rgba(0, 0, 0, 0);
+		}
+	}
+
+	&.work .project-img-container:hover .project-img {
+		transform: none;
+	}
+}
+
 .project header {
 	text-align: left;
 }
@@ -1703,7 +1718,23 @@ $icon-sidebar-container-width: 3.1rem;
 	max-width: 31rem;
 	text-align: center;
 	margin: 0 auto 2rem;
+
+	margin-bottom: 8rem;
 }
+.skills {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-bottom: 6rem;
+
+	li {
+		border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+		list-style-type: none;
+		padding: 0.55rem 0;
+		margin: 0.25rem 1rem;
+	}
+}
+
 .project-date {
 	margin-bottom: 0.6rem;
 	font-weight: 600;
@@ -1763,5 +1794,58 @@ $icon-sidebar-container-width: 3.1rem;
 	}
 	& > div:nth-child(2) {
 		padding-left: 1rem;
+	}
+}
+
+// .inner > p {
+// 	margin: 3rem 0 2rem;
+// }
+.avatar.special {
+	display: block;
+	border: 2px solid white;
+	width: 8rem;
+	height: 8rem;
+	box-sizing: content-box;
+	border-radius: 100%;
+	margin: 0 auto 2rem;
+	padding: 0.8rem;
+
+	img {
+		margin: 0;
+		height: 8rem;
+		width: 8rem;
+	}
+}
+
+.camea-title {
+	color: #cef9ffcb;
+	text-transform: lowercase;
+	font-weight: 900;
+	font-size: 4rem;
+	text-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	// left: 3rem;
+	left: 50%;
+	// bottom: 4rem;
+	margin: 0;
+}
+
+.ether-img {
+	img {
+		object-fit: cover;
+		object-position: 0% 100%;
+	}
+
+	p {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 4rem;
+		text-transform: capitalize;
+		text-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+		font-weight: 600;
 	}
 }

@@ -1281,8 +1281,8 @@ body.landing #page-wrapper {
   -o-object-fit: cover;
      object-fit: cover;
   left: -1rem;
-  -o-object-position: 0% 40%;
-     object-position: 0% 40%;
+  -o-object-position: 50% 40%;
+     object-position: 50% 40%;
 }
 
 .img-blur {
@@ -1652,6 +1652,18 @@ textarea:-webkit-autofill:hover {
   margin-bottom: 3rem;
 }
 
+#one .project a:not(.button) {
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.6);
+  padding-bottom: 0.3rem;
+  transition: 0.2s ease;
+}
+#one .project a:not(.button):hover {
+  border-color: rgba(0, 0, 0, 0);
+}
+#one .project.work .project-img-container:hover .project-img {
+  transform: none;
+}
+
 .project header {
   text-align: left;
 }
@@ -1771,6 +1783,20 @@ textarea:-webkit-autofill:hover {
   max-width: 31rem;
   text-align: center;
   margin: 0 auto 2rem;
+  margin-bottom: 8rem;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 6rem;
+}
+.skills li {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+  list-style-type: none;
+  padding: 0.55rem 0;
+  margin: 0.25rem 1rem;
 }
 
 .project-date {
@@ -1826,4 +1852,50 @@ textarea:-webkit-autofill:hover {
 }
 .contact-inputs > div:nth-child(2) {
   padding-left: 1rem;
+}
+
+.avatar.special {
+  display: block;
+  border: 2px solid white;
+  width: 8rem;
+  height: 8rem;
+  box-sizing: content-box;
+  border-radius: 100%;
+  margin: 0 auto 2rem;
+  padding: 0.8rem;
+}
+.avatar.special img {
+  margin: 0;
+  height: 8rem;
+  width: 8rem;
+}
+
+.camea-title {
+  color: rgba(206, 249, 255, 0.7960784314);
+  text-transform: lowercase;
+  font-weight: 900;
+  font-size: 4rem;
+  text-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  margin: 0;
+}
+
+.ether-img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0% 100%;
+     object-position: 0% 100%;
+}
+.ether-img p {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  text-transform: capitalize;
+  text-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  font-weight: 600;
 }
