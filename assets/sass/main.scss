@@ -1641,11 +1641,6 @@ $icon-sidebar-container-width: 3.1rem;
 	object-position: center;
 	transition: 0.3s ease;
 }
-@media screen and (min-width: 737px) {
-	.project-img {
-		height: 24rem;
-	}
-}
 @media screen and (min-width: $single-column-projects-threshold) {
 	.project {
 		margin-bottom: 0 !important;
@@ -1659,10 +1654,6 @@ $icon-sidebar-container-width: 3.1rem;
 		&:nth-child(odd) {
 			padding-left: 0;
 		}
-	}
-
-	.project-img {
-		height: $project-image-default-height;
 	}
 }
 @media screen and (max-width: 736px) {
@@ -1682,11 +1673,6 @@ $icon-sidebar-container-width: 3.1rem;
 
 @media screen and (min-width: 737px) {
 	.hide-desktop {
-		display: none !important;
-	}
-}
-@media screen and (max-width: 980px) {
-	.hide-mobile {
 		display: none !important;
 	}
 }

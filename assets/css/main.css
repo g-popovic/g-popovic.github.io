@@ -1705,11 +1705,6 @@ textarea:-webkit-autofill:hover {
   transition: 0.3s ease;
 }
 
-@media screen and (min-width: 737px) {
-  .project-img {
-    height: 24rem;
-  }
-}
 @media screen and (min-width: 830px) {
   .project {
     margin-bottom: 0 !important;
@@ -1721,9 +1716,6 @@ textarea:-webkit-autofill:hover {
   }
   .project:nth-child(odd) {
     padding-left: 0;
-  }
-  .project-img {
-    height: auto;
   }
 }
 @media screen and (max-width: 736px) {
@@ -1742,11 +1734,6 @@ textarea:-webkit-autofill:hover {
 }
 @media screen and (min-width: 737px) {
   .hide-desktop {
-    display: none !important;
-  }
-}
-@media screen and (max-width: 980px) {
-  .hide-mobile {
     display: none !important;
   }
 }
