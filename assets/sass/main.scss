@@ -1902,8 +1902,26 @@ $icon-sidebar-container-width: 3.1rem;
 			margin-bottom: 0.3rem;
 		}
 	}
+}
 
-	// ::before
+@media screen and (max-width: 736px) {
+	.hackathon-winner-label {
+		& > div {
+			top: 17%;
+			right: -33%;
+			height: 3rem;
+			border-bottom-width: 0.4rem;
+
+			span:first-child {
+				font-size: 0.6rem;
+			}
+
+			span:last-child {
+				font-size: 0.9rem;
+				margin-top: -0.6rem;
+			}
+		}
+	}
 }
 
 .personal-projects .project {
