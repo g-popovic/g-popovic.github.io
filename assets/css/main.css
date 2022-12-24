@@ -1947,3 +1947,20 @@ textarea:-webkit-autofill:hover {
   margin-top: -0.5rem;
   margin-bottom: 0.3rem;
 }
+
+.personal-projects .project header {
+  margin-bottom: 0.5rem;
+}
+
+.project-actions {
+  display: flex;
+  margin-bottom: 0 !important;
+  margin-top: auto;
+}
+.project-actions a {
+  border-bottom: none !important;
+  font-size: 1.5rem;
+}
+.project-actions a:not(:last-child) {
+  margin-right: 1rem;
+}
