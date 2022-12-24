@@ -1647,6 +1647,7 @@ textarea:-webkit-autofill:hover {
   display: flex;
   flex-direction: column;
   width: 100%;
+  position: relative;
 }
 .project:not(:last-child) {
   margin-bottom: 3rem;
@@ -1659,6 +1660,9 @@ textarea:-webkit-autofill:hover {
 }
 #one .project a:not(.button):hover {
   border-color: rgba(0, 0, 0, 0);
+}
+#one .project.work .project-img {
+  height: auto;
 }
 #one .project.work .project-img-container:hover .project-img {
   transform: none;
@@ -1680,7 +1684,7 @@ textarea:-webkit-autofill:hover {
 }
 
 .project-img {
-  height: 16rem;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -1706,7 +1710,7 @@ textarea:-webkit-autofill:hover {
     padding-left: 0;
   }
   .project-img {
-    height: 16rem;
+    height: auto;
   }
 }
 @media screen and (max-width: 736px) {
@@ -1761,15 +1765,18 @@ textarea:-webkit-autofill:hover {
     opacity: 0;
     transition: opacity 0.3s ease;
   }
-  .project-img-container:hover .actions {
+  .project-img-container:hover .actions,
+.hackathon-winner-label-container:hover .actions {
     opacity: 1;
     -webkit-backdrop-filter: blur(6px);
             backdrop-filter: blur(6px);
   }
-  .project-img-container:hover .project-img {
+  .project-img-container:hover .project-img,
+.hackathon-winner-label-container:hover .project-img {
     transform: scale(1.03);
   }
-  .project-img-container:hover .project-img-icons {
+  .project-img-container:hover .project-img-icons,
+.hackathon-winner-label-container:hover .project-img-icons {
     opacity: 0;
   }
 }
@@ -1898,4 +1905,45 @@ textarea:-webkit-autofill:hover {
   text-transform: capitalize;
   text-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
   font-weight: 600;
+}
+
+.hackathon-winner-label-container {
+  position: relative;
+}
+
+.hackathon-winner-label {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  height: 20rem;
+  width: 20rem;
+  overflow: hidden;
+}
+.hackathon-winner-label > div {
+  background-color: #fba21e;
+  position: absolute;
+  top: 20%;
+  right: -30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+  width: 20rem;
+  transform: translate(0, -50%) rotate(45deg);
+  border-bottom: 0.5rem solid #de8705;
+}
+.hackathon-winner-label > div span {
+  padding: 0;
+  margin: 0;
+}
+.hackathon-winner-label > div span:first-child {
+  font-size: 0.8rem;
+  margin: 0;
+}
+.hackathon-winner-label > div span:last-child {
+  font-size: 1.3rem;
+  display: block;
+  margin-top: -0.5rem;
+  margin-bottom: 0.3rem;
 }

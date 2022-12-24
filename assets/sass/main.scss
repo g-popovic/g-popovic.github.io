@@ -3,7 +3,7 @@
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 $single-column-projects-threshold: 830px;
-$project-image-default-height: 16rem;
+$project-image-default-height: auto;
 
 html {
 	scroll-behavior: smooth;
@@ -1578,6 +1578,7 @@ $icon-sidebar-container-width: 3.1rem;
 	display: flex;
 	flex-direction: column;
 	width: 100%;
+	position: relative;
 
 	&:not(:last-child) {
 		margin-bottom: 3rem;
@@ -1594,8 +1595,14 @@ $icon-sidebar-container-width: 3.1rem;
 		}
 	}
 
-	&.work .project-img-container:hover .project-img {
-		transform: none;
+	&.work {
+		.project-img {
+			height: auto;
+		}
+
+		.project-img-container:hover .project-img {
+			transform: none;
+		}
 	}
 }
 
@@ -1694,7 +1701,8 @@ $icon-sidebar-container-width: 3.1rem;
 		opacity: 0;
 		transition: opacity 0.3s ease;
 	}
-	.project-img-container:hover {
+	.project-img-container:hover,
+	.hackathon-winner-label-container:hover {
 		.actions {
 			opacity: 1;
 			backdrop-filter: blur(6px);
@@ -1848,4 +1856,54 @@ $icon-sidebar-container-width: 3.1rem;
 		text-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
 		font-weight: 600;
 	}
+}
+
+.hackathon-winner-label-container {
+	position: relative;
+}
+
+.hackathon-winner-label {
+	position: absolute;
+	top: -0.5rem;
+	right: -0.5rem;
+	height: 20rem;
+	width: 20rem;
+	// border: 2px solid red;
+	overflow: hidden;
+
+	& > div {
+		background-color: #fba21e;
+		position: absolute;
+		top: 20%;
+		right: -30%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 4rem;
+		width: 20rem;
+		// transform: translate(0, -50%);
+		transform: translate(0, -50%) rotate(45deg);
+		border-bottom: 0.5rem solid #de8705;
+
+		span {
+			padding: 0;
+			margin: 0;
+		}
+
+		span:first-child {
+			font-size: 0.8rem;
+			margin: 0;
+			// margin-bottom: -0.8rem;
+		}
+
+		span:last-child {
+			font-size: 1.3rem;
+			display: block;
+			margin-top: -0.5rem;
+			margin-bottom: 0.3rem;
+		}
+	}
+
+	// ::before
 }
