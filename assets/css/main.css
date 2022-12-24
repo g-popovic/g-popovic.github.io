@@ -1668,7 +1668,18 @@ textarea:-webkit-autofill:hover {
 #one .project.work .project-img-container:hover .project-img {
   transform: none;
 }
+#one .project.work ul {
+  margin-bottom: 1rem;
+}
 
+@media screen and (max-width: 736px) {
+  #one .project.work ul {
+    margin-bottom: 0;
+  }
+  #one header.major {
+    margin-top: 3rem;
+  }
+}
 .project header {
   text-align: left;
 }

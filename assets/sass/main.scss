@@ -1582,24 +1582,42 @@ $icon-sidebar-container-width: 3.1rem;
 		margin-bottom: 3rem;
 	}
 }
-#one .project {
-	a:not(.button) {
-		border-bottom: 1px dotted rgba(255, 255, 255, 0.6);
-		padding-bottom: 0.3rem;
-		transition: 0.2s ease;
+#one {
+	.project {
+		a:not(.button) {
+			border-bottom: 1px dotted rgba(255, 255, 255, 0.6);
+			padding-bottom: 0.3rem;
+			transition: 0.2s ease;
 
-		&:hover {
-			border-color: rgba(0, 0, 0, 0);
+			&:hover {
+				border-color: rgba(0, 0, 0, 0);
+			}
+		}
+
+		&.work {
+			.project-img {
+				height: auto;
+			}
+
+			.project-img-container:hover .project-img {
+				transform: none;
+			}
+
+			ul {
+				margin-bottom: 1rem;
+			}
 		}
 	}
+}
 
-	&.work {
-		.project-img {
-			height: auto;
+@media screen and (max-width: 736px) {
+	#one {
+		.project.work ul {
+			margin-bottom: 0;
 		}
 
-		.project-img-container:hover .project-img {
-			transform: none;
+		header.major {
+			margin-top: 3rem;
 		}
 	}
 }
