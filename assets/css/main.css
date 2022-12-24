@@ -1562,9 +1562,10 @@ textarea:-webkit-autofill:hover {
   position: fixed;
   flex-direction: column;
   display: flex;
+  align-items: flex-end;
   left: 0;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translate(-100%, -50%);
 }
 
 .icons.sidebar li {
@@ -1572,7 +1573,7 @@ textarea:-webkit-autofill:hover {
   padding: 0 !important;
   background: rgba(15, 18, 21, 0.25);
   position: relative;
-  transform: translateX(calc(-100% + 3.1rem));
+  transform: translateX(3.1rem);
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -1630,7 +1631,7 @@ textarea:-webkit-autofill:hover {
 }
 
 .icons.sidebar li:hover {
-  transform: translateX(0);
+  transform: translateX(100%);
   border-radius: 0 5px 5px 0;
   background: rgba(15, 18, 21, 0.5);
 }

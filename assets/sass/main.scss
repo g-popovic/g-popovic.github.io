@@ -1497,19 +1497,18 @@ $icon-sidebar-container-width: 3.1rem;
 	margin: -0.5rem 0 2rem;
 	position: fixed;
 	flex-direction: column;
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
+	align-items: flex-end;
 	left: 0;
 	top: 50%;
-	transform: translateY(-50%);
+	transform: translate(-100%, -50%);
 }
 .icons.sidebar li {
 	margin: 0;
 	padding: 0 !important;
 	background: $icon-sidebar-inactive-color;
 	position: relative;
-	transform: translateX(calc(-100% + $icon-sidebar-container-width));
+	transform: translateX($icon-sidebar-container-width);
 	width: fit-content;
 	transition: 0.5s ease !important;
 	box-sizing: border-box;
@@ -1560,8 +1559,7 @@ $icon-sidebar-container-width: 3.1rem;
 	}
 }
 .icons.sidebar li:hover {
-	// .icons.sidebar li {
-	transform: translateX(0);
+	transform: translateX(100%);
 	border-radius: 0 5px 5px 0;
 	background: $icon-sidebar-active-color;
 
