@@ -1857,13 +1857,14 @@ textarea:-webkit-autofill:hover {
   font-size: 115%;
 }
 
-.contact-inputs > div:nth-child(1) {
-  padding-right: 0.6rem;
+@media screen and (min-width: 737px) {
+  .contact-inputs > div:nth-child(1) {
+    padding-right: 0.6rem;
+  }
+  .contact-inputs > div:nth-child(2) {
+    padding-left: 1rem;
+  }
 }
-.contact-inputs > div:nth-child(2) {
-  padding-left: 1rem;
-}
-
 .avatar.special {
   display: block;
   border: 2px solid white;

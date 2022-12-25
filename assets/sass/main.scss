@@ -1803,18 +1803,17 @@ $icon-sidebar-container-width: 3.1rem;
 	font-size: 115%;
 }
 
-.contact-inputs {
-	& > div:nth-child(1) {
-		padding-right: 0.6rem;
-	}
-	& > div:nth-child(2) {
-		padding-left: 1rem;
+@media screen and (min-width: 737px) {
+	.contact-inputs {
+		& > div:nth-child(1) {
+			padding-right: 0.6rem;
+		}
+		& > div:nth-child(2) {
+			padding-left: 1rem;
+		}
 	}
 }
 
-// .inner > p {
-// 	margin: 3rem 0 2rem;
-// }
 .avatar.special {
 	display: block;
 	border: 2px solid white;
