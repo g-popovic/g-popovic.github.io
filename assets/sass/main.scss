@@ -1609,6 +1609,12 @@ $icon-sidebar-container-width: 3.1rem;
 			}
 		}
 	}
+
+	.info {
+		color: rgba(255, 255, 255, 0.4);
+		margin: 0;
+		font-style: italic;
+	}
 }
 
 @media screen and (max-width: 736px) {
@@ -1750,10 +1756,6 @@ $icon-sidebar-container-width: 3.1rem;
 	margin-bottom: 0.6rem;
 	font-weight: 600;
 	text-transform: uppercase;
-}
-
-.project li {
-	text-align: justify;
 }
 
 .project-img-icons {

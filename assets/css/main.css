@@ -1672,6 +1672,11 @@ textarea:-webkit-autofill:hover {
 #one .project.work ul {
   margin-bottom: 1rem;
 }
+#one .info {
+  color: rgba(255, 255, 255, 0.4);
+  margin: 0;
+  font-style: italic;
+}
 
 @media screen and (max-width: 736px) {
   #one .project.work ul {
@@ -1810,10 +1815,6 @@ textarea:-webkit-autofill:hover {
   margin-bottom: 0.6rem;
   font-weight: 600;
   text-transform: uppercase;
-}
-
-.project li {
-  text-align: justify;
 }
 
 .project-img-icons {
