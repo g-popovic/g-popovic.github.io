@@ -94,7 +94,6 @@ body {
 body.is-preload *,
 body.is-preload :after,
 body.is-preload :before {
-  -webkit-animation: none !important;
   animation: none !important;
   transition: none !important;
 }
@@ -112,22 +111,22 @@ textarea {
 
 @media screen and (max-width: 1680px) {
   body,
-input,
-textarea {
+  input,
+  textarea {
     font-size: 13pt;
   }
 }
 @media screen and (max-width: 1280px) {
   body,
-input,
-textarea {
+  input,
+  textarea {
     font-size: 12pt;
   }
 }
 @media screen and (max-width: 736px) {
   body,
-input,
-textarea {
+  input,
+  textarea {
     font-size: 11pt;
     letter-spacing: 0.0375em;
   }
@@ -824,17 +823,17 @@ ul.actions.special li:first-child {
     padding-left: 0;
   }
   ul.actions:not(.fixed) li .button,
-ul.actions:not(.fixed) li button,
-ul.actions:not(.fixed) li input[type=button],
-ul.actions:not(.fixed) li input[type=reset],
-ul.actions:not(.fixed) li input[type=submit] {
+  ul.actions:not(.fixed) li button,
+  ul.actions:not(.fixed) li input[type=button],
+  ul.actions:not(.fixed) li input[type=reset],
+  ul.actions:not(.fixed) li input[type=submit] {
     width: 100%;
   }
   ul.actions:not(.fixed) li .button.icon:before,
-ul.actions:not(.fixed) li button.icon:before,
-ul.actions:not(.fixed) li input[type=button].icon:before,
-ul.actions:not(.fixed) li input[type=reset].icon:before,
-ul.actions:not(.fixed) li input[type=submit].icon:before {
+  ul.actions:not(.fixed) li button.icon:before,
+  ul.actions:not(.fixed) li input[type=button].icon:before,
+  ul.actions:not(.fixed) li input[type=reset].icon:before,
+  ul.actions:not(.fixed) li input[type=submit].icon:before {
     margin-left: -0.5em;
   }
 }
@@ -981,10 +980,10 @@ input[type=submit]:disabled {
 
 @media screen and (max-width: 736px) {
   .button,
-button,
-input[type=button],
-input[type=reset],
-input[type=submit] {
+  button,
+  input[type=button],
+  input[type=reset],
+  input[type=submit] {
     height: 3.75em;
     line-height: 3.75em;
   }
@@ -1279,17 +1278,29 @@ body.landing #page-wrapper {
 
 .banner-img {
   position: absolute;
-  width: 110%;
+  width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  left: -1rem;
-  -o-object-position: 50% 40%;
-     object-position: 50% 40%;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
 }
-
-.img-blur {
-  filter: blur(8px);
+.banner-img[src*="2"] {
+  -o-object-position: 50% 56%;
+     object-position: 50% 56%;
+}
+.banner-img[src*="3"] {
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+}
+.banner-img[src*="9"] {
+  height: auto;
+  top: -78%;
+  left: -8.5%;
+  width: 110%;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+  transform: rotate(0.5deg);
 }
 
 .banner-img-gradient {
@@ -1473,15 +1484,6 @@ textarea:-webkit-autofill:hover {
   width: 1.5rem;
   height: 1.5rem;
 }
-
-@-webkit-keyframes spin {
-  0% {
-    transform: translate(-50%, -50%) rotate(100deg);
-  }
-  100% {
-    transform: translate(-50%, -50%) rotate(460deg);
-  }
-}
 @keyframes spin {
   0% {
     transform: translate(-50%, -50%) rotate(100deg);
@@ -1517,7 +1519,6 @@ textarea:-webkit-autofill:hover {
 .primary.button-loading .loading-icon {
   transition: 0.3s 0.1s ease-out !important;
   transform: translate(-50%, -50%) scale(1) rotate(100deg);
-  -webkit-animation: spin infinite linear 1s 0.4s !important;
   animation: spin infinite linear 1s 0.4s !important;
 }
 
@@ -1577,7 +1578,6 @@ textarea:-webkit-autofill:hover {
   background: rgba(15, 18, 21, 0.25);
   position: relative;
   transform: translateX(3.1rem);
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   transition: 0.5s ease !important;
@@ -1604,7 +1604,6 @@ textarea:-webkit-autofill:hover {
 
 .icons.sidebar li a {
   border: none;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   padding: 0.9rem 0 0.9rem 1.8rem !important;
@@ -1773,17 +1772,17 @@ textarea:-webkit-autofill:hover {
     transition: opacity 0.3s ease;
   }
   .project-img-container:hover .actions,
-.hackathon-winner-label-container:hover .actions {
+  .hackathon-winner-label-container:hover .actions {
     opacity: 1;
     -webkit-backdrop-filter: blur(6px);
             backdrop-filter: blur(6px);
   }
   .project-img-container:hover .project-img,
-.hackathon-winner-label-container:hover .project-img {
+  .hackathon-winner-label-container:hover .project-img {
     transform: scale(1.03);
   }
   .project-img-container:hover .project-img-icons,
-.hackathon-winner-label-container:hover .project-img-icons {
+  .hackathon-winner-label-container:hover .project-img-icons {
     opacity: 0;
   }
 }
