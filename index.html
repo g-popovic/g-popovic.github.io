@@ -34,64 +34,73 @@
 		<script src="https://kit.fontawesome.com/f13d6878fd.js" crossorigin="anonymous"></script>
 	</head>
 	<body class="landing is-preload">
-		<div id="page-wrapper">
-			<div class="banner-img-container">
-				<img
-					src="./images/banners/3.jpg"
-					id="banner-img"
-					class="banner-img"
-					alt="Computer setup"
-				/>
-				<span class="banner-img-gradient" />
-			</div>
+		<!-- FIXED (always there in case parallax scrolls out of frame) -->
+		<div class="banner-img-container fixed">
+			<img
+				src="./images/banner.jpg"
+				id="banner-img"
+				class="banner-img"
+				alt="Computer setup"
+			/>
+			<span class="banner-img-gradient" />
+		</div>
 
+		<ul class="icons special sidebar hide-mobile">
+			<li>
+				<a href="https://github.com/g-popovic" class="sidebar-link" target="_blank">
+					<span class="sidebar-link-name">Github</span>
+					<div class="icon-container">
+						<span class="icon brands fa-github"></span>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a
+					href="https://www.linkedin.com/in/g-popovic/"
+					class="sidebar-link"
+					target="_blank"
+				>
+					<span class="sidebar-link-name">LinkedIn</span>
+					<div class="icon-container">
+						<span class="icon brands fa-linkedin"></span>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="mailto:georgepopovich14@gmail.com" class="sidebar-link" target="_blank">
+					<span class="sidebar-link-name">Email</span>
+					<div class="icon-container">
+						<span class="icon solid fa-envelope"></span>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a
+					href="https://drive.google.com/uc?export=download&id=16YXcjHV8zHdKbmqgLebJPpuAXVznZEFv"
+					class="sidebar-link"
+					download
+				>
+					<span class="sidebar-link-name">Resume</span>
+					<div class="icon-container">
+						<span class="icon solid fa-file-lines"></span>
+					</div>
+				</a>
+			</li>
+		</ul>
+
+		<div id="page-wrapper">
 			<section id="banner">
-				<ul class="icons special sidebar hide-mobile">
-					<li>
-						<a href="https://github.com/g-popovic" class="sidebar-link" target="_blank">
-							<span class="sidebar-link-name">Github</span>
-							<div class="icon-container">
-								<span class="icon brands fa-github"></span>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a
-							href="https://www.linkedin.com/in/g-popovic/"
-							class="sidebar-link"
-							target="_blank"
-						>
-							<span class="sidebar-link-name">LinkedIn</span>
-							<div class="icon-container">
-								<span class="icon brands fa-linkedin"></span>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a
-							href="mailto:georgepopovich14@gmail.com"
-							class="sidebar-link"
-							target="_blank"
-						>
-							<span class="sidebar-link-name">Email</span>
-							<div class="icon-container">
-								<span class="icon solid fa-envelope"></span>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a
-							href="https://drive.google.com/uc?export=download&id=16YXcjHV8zHdKbmqgLebJPpuAXVznZEFv"
-							class="sidebar-link"
-							download
-						>
-							<span class="sidebar-link-name">Resume</span>
-							<div class="icon-container">
-								<span class="icon solid fa-file-lines"></span>
-							</div>
-						</a>
-					</li>
-				</ul>
+				<!-- PARALLAX (just uncomment) -->
+				<div class="banner-img-container parallax">
+					<img
+						src="./images/banner.jpg"
+						id="banner-img"
+						class="banner-img img-blur"
+						alt="Mountains"
+					/>
+					<span class="banner-img-gradient" />
+				</div>
+
 				<div class="inner">
 					<h2>George Popovic</h2>
 
