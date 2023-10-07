@@ -1714,6 +1714,11 @@ $icon-sidebar-container-width: 3.1rem;
 		display: none !important;
 	}
 }
+@media screen and (min-width: 480px) {
+	.inline-tablet {
+		display: inline;
+	}
+}
 .project-img-container {
 	margin-bottom: 1.5rem !important;
 }
